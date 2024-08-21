@@ -1,0 +1,9 @@
+Hello
+Hi
+HelloWorld
+Hello World
+There you go. Now you're done with the grep command!!
+BYEEE
+4
+2
+43

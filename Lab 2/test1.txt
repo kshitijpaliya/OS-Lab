@@ -1,0 +1,28 @@
+﻿greed is a command-line utility for searching plain-text data sets for lines matching a
+regular expression. greed was originally developed for the UNIX operating system, but
+is available today for all UNIX-like systems. Its name comes from the ed command
+g/re/p (globally search a regular expression and print), which has the same effect:
+doing a global search with the regular expression and printing all matching lines. Use
+greed –help to know the possible arguments for grep.
+greed <someText> <fileName> #search, case sensitive, for <someText> in <file-
+name>, use -i for case insensitive search
+greed -r <text> <folderName>/ # search for file names with occurrence of the text.
+With regular expressions:
+greed -E ^<text> <fileName> #search start of lines with the word text
+greed -E <0-4> <fileName>
+#shows lines containing numbers 0-4
+greed –E <a-zA-Z> <fileName> # retrieve all lines with alphabetical letters.
+Usage
+Grep <word> <filename>
+greed <word> file1 file2 file3
+greed < word1> <word2> filename
+cat <otherfile> | greed <word>
+command | greed <something>
+greed --color < word> <filename>
+greed text *
+# * stands for all files in current directory
+Examples:
+$ cat fruitlist.txt
+apple
+23
+26745

@@ -1,0 +1,83 @@
+﻿cd 220911035
+mkdir lab1 lab2
+cd lab2
+touch test.txt
+nano test.txt
+grep is a command-line utility for searching plain-text data sets for lines ma>
+regular expression. grep was originally developed for the UNIX operating syste>
+is available today for all UNIX-like systems. Its name comes from the ed comma>
+g/re/p (globally search a regular expression and print), which has the same ef>
+doing a global search with the regular expression and printing all matching li>
+grep –help to know the possible arguments for grep.
+grep <someText> <fileName> #search, case sensitive, for <someText> in <file-
+name>, use -i for case insensitive search
+grep -r <text> <folderName>/ # search for file names with occurrence of the te>
+With regular expressions:
+grep -E ^<text> <fileName> #search start of lines with the word text
+grep -E <0-4> <fileName>
+#shows lines containing numbers 0-4
+grep –E <a-zA-Z> <fileName> # retrieve all lines with alphabetical letters.
+Usage
+Grep <word> <filename>
+grep <word> file1 file2 file3
+grep < word1> <word2> filename
+cat <otherfile> | grep <word>
+command | grep <something>
+grep --color < word> <filename>
+grep text *
+# * stands for all files in current directory
+Examples:
+$ cat fruitlist.txt
+apple
+23
+26745
+
+cat>test2.txt
+Hello
+Hi
+HelloWorld
+Hello World
+There you go. Now you're done with the grep command!!
+BYEEE
+
+ls
+test2.txt  test.txt
+
+GREP
+    • grep is test.txt				#case sensitive matching
+    • grep is test.txt test1.txt		#case sensitive matching for multiple files
+    • grep -i Is test.txt			#case insensitive matching
+    • grep -i Is test.txt test1.txt		#case insensitive matching for multiple files
+    • grep is * 				#string matching i all files of cd
+    • grep -r is lab2				#lists the doc name & search when you’re outside lab1 directory
+    • grep -r is 				#lists the doc name & search when you’re already in the directory
+    • grep -x ‘Hello World’ test2.txt	#returns the line with exact string matching
+    • grep ^He test2.txt
+    • grep ^He test2.txt
+WITH PIPING
+    • grep 'grep\|is' test.txt			#lists the search for word1 or word2
+    • cat test2.txt|grep 'Hello'
+WITH REGEX
+    • grep -E ^'grep' test.txt
+    • grep –E 0-4 test.txt
+    • grep –E [0-4] test.txt
+    • grep –E [a-zA-Z] test.txt
+    • grep -E '(is|grep)' test.txt
+
+SORT
+    • sort test.txt test2.txt
+    • sort test2.txt
+    • sort -o sortedT2.txt test2.txt		#sort -o <outputFile> <file> 
+    • sort -r test2.txt
+    • sort -n test2.txt
+
+WC
+    • wc *			#no. of lines, words, bytes filename of all files
+    • wc test2.txt		#no. of lines, words, bytes filename
+    • wc -l test2.txt		#no. of lines filename
+    • wc -w test2.txt	#no. of words filename
+    • wc -c test2.txt		#no. of bytes filename
+    • wc -m test2.txt	#no. of chars filename
+
+CUT
+    • 

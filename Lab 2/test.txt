@@ -1,0 +1,28 @@
+﻿grep is a command-line utility for searching plain-text data sets for lines matching a
+regular expression. grep was originally developed for the UNIX operating system, but
+is available today for all UNIX-like systems. Its name comes from the ed command
+g/re/p (globally search a regular expression and print), which has the same effect:
+doing a global search with the regular expression and printing all matching lines. Use
+grep –help to know the possible arguments for grep.
+grep <someText> <fileName> #search, case sensitive, for <someText> in <file-
+name>, use -i for case insensitive search
+grep -r <text> <folderName>/ # search for file names with occurrence of the text.
+With regular expressions:
+grep -E ^<text> <fileName> #search start of lines with the word text
+grep -E <0-4> <fileName>
+#shows lines containing numbers 0-4
+grep –E <a-zA-Z> <fileName> # retrieve all lines with alphabetical letters.
+Usage
+Grep <word> <filename>
+grep <word> file1 file2 file3
+grep < word1> <word2> filename
+cat <otherfile> | grep <word>
+command | grep <something>
+grep --color < word> <filename>
+grep text *
+# * stands for all files in current directory
+Examples:
+$ cat fruitlist.txt
+apple
+23
+26745
